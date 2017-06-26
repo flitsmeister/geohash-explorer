@@ -1,0 +1,80 @@
+<head>
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta charset="utf-8">
+  <title>geohash-explorer</title>
+  <style>
+
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .map-container {
+    width: 100%;
+    max-width: 100%;
+      height: 100%;
+  }
+
+  .control {
+    z-index: 10;
+    position: absolute;
+    background-color: #FFF;
+    font-size: 15pt;
+    text-align: center;
+    padding: 5px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+  }
+
+  .gh-indicator {
+    top: 50px;
+    left: 10px;
+    width: 150px;
+  }
+
+  .project_picker {
+    top: 100px;
+    left: 10px;
+    width: 150px;
+  }
+
+  .project_picker select {
+    width: 100%;
+  }
+
+</style>
+</head>
+
+<body>
+  {{> map}}
+  {{> indicator}}
+  {{> project_picker}} 
+</body>
+
+<template name="indicator">  
+  <div class="gh-indicator control">
+    {{geohashIndicator}}
+  </div>
+</template>
+
+<template name="project_picker">
+
+  <div class="project_picker control">
+
+  <select>
+    <option name="{{current}}" selected disabled="">{{current}}</option>
+    {{#each projects}}
+      <option name="{{this}}">{{this}}</option>
+    {{/each}}
+  </select>
+
+  </div>
+  
+</template>
+
+<template name="map">  
+  <div class="map-container">
+    {{> googleMap name="map" options=mapOptions}}
+  </div>
+</template>
