@@ -123,7 +123,7 @@ Template.map.onCreated(function () {
 
         window.map = map;
 
-        map.instance.data.loadGeoJson(SessionStore.get('project') + '-features.geojson')
+        map.instance.data.loadGeoJson(SessionStore.get('project') + '.geojson')
         console.log('ready');
 
 
