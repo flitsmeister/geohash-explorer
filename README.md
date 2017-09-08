@@ -14,13 +14,13 @@ Project is supplied as is, feature improvements are welcome as a PR :-)
 
 
 To extract a list of geohashes from robomongo, you can run the following:
-`
+```
 records = [];
 var cursor = db.getCollection('geohashes').find({"project": "project"}, {});
 while(cursor.hasNext()) {
     records.push(cursor.next().hash)
 }
 print(tojson(records));
-`
+```
 
 ![Demo Screenshot](screenshot.jpg?raw=true "Screenshot")
