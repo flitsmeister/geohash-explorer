@@ -5,6 +5,7 @@ Simple Meteor Webapp to manually translate Geojson features to Geohashes with a 
 
 Project is supplied as is, feature improvements are welcome as a PR :-)
 
+- Install dependencies with `meteor npm install`
 - Run with `meteor`.
 - Add project to MongoDB database `meteor -> projects`, with `name` set to project-name.
 - Place .geojson files in the `public/` folder, with name '<Project>.geojson'.
