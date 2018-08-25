@@ -1,14 +1,22 @@
 # geohash-explorer
 Simple Meteor Webapp to manually translate Geojson features to Geohashes with a map.
 
-- Install Meteor via `npm i meteor -g`
+- Install Meteor via instructions on https://www.meteor.com/install
 
 Project is supplied as is, feature improvements are welcome as a PR :-)
 
+
+- Add Google Maps API key to:
+```
+Meteor.startup(function () {
+    GoogleMaps.load({ key: '' });
+});
+```
 - Install dependencies with `meteor npm install`
 - Run with `meteor`.
 - Connect to Meteor MongoDB `127.0.0.1` and port `3001`, without auth.
-- Add collection `projects` and add objects with `name` set to project-names.
+- Add database `meteor` if it doesn't exist yet.
+- Add collection `projects` to `meteor` db, and add objects with `name` set to project-names.
 - Place .geojson files in the `public/` folder, with same name '<Project>.geojson'.
 - Click on the map to add a Geohash to the project, and click it again to make it disappear.
 
