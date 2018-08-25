@@ -58,3 +58,5 @@ typings/
 .env
 
 public/*.geojson
+.DS_Store
+.DS_Store

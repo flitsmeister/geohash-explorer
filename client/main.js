@@ -73,7 +73,7 @@ Template.registerHelper('geohashIndicator', function (input) {
 });
 
 Meteor.startup(function () {
-    GoogleMaps.load();
+    GoogleMaps.load({ key: '' });
 });
 
 Template.map.helpers({
