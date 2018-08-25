@@ -5,6 +5,13 @@ Simple Meteor Webapp to manually translate Geojson features to Geohashes with a 
 
 Project is supplied as is, feature improvements are welcome as a PR :-)
 
+
+- Add Google Maps API key to:
+```
+Meteor.startup(function () {
+    GoogleMaps.load({ key: '' });
+});
+```
 - Install dependencies with `meteor npm install`
 - Run with `meteor`.
 - Connect to Meteor MongoDB `127.0.0.1` and port `3001`, without auth.
