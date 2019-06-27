@@ -31,4 +31,10 @@ while(cursor.hasNext()) {
 print(tojson(records));
 ```
 
+To generate geohashes from a list of geohashes, or from a config file:
+
+- Create a project in the Meteor db
+- Create a file and enter a geohash per newline, with no special characters (no spaces, comma's, etc)
+- Run `node server/helpers/generate_from_geohashes.js ./path/to/geohashes_file.txt your-new-project`
+
 ![Demo Screenshot](screenshot.jpg?raw=true "Screenshot")
